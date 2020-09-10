@@ -5,7 +5,7 @@ import * as Opentok from 'opentok';
 @Controller('opentok')
 export class OpentokController {
 
-    constructor(private readonly opentokService: OpentokService) {}
+    constructor(private readonly opentokService: OpentokService) { }
 
     @Get('/session')
     async createSession(): Promise<any> {
@@ -16,11 +16,11 @@ export class OpentokController {
     }
 
     @Get('/session/:id/token')
-        generateToken(@Param('id') id) {
-            return {
-                token: this.opentokService.generateToken(id),
-            }
+    generateToken(@Param('id') id) {
+        return {
+            token: this.opentokService.generateToken(id),
         }
+    }
 
     @Get('/room/:name')
     async roomName(@Param('name') name) {
