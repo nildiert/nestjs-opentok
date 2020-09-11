@@ -5,7 +5,8 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import { Connection } from 'typeorm';
 import { UsersModule } from './users/users.module';
 import { UsersEntity } from "./users/user.entity";
-import { OpentokModule } from './opentok/opentok.module';
+import { OpentokModule } from './opentok/opentok.module'
+
 
 @Module({
   imports: [TypeOrmModule.forRoot(),
