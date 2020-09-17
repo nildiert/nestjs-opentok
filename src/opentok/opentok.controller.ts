@@ -28,12 +28,11 @@ export class OpentokController {
         const sessionId = session.sessionId;
         return {
             statusCode: HttpStatus.OK,
-            data: [{
+            data: {
                 apiKey: this.opentokService.getApiKey(),
                 sessionId: session.sessionId,
                 token: this.opentokService.generateToken(sessionId)
             }
-            ]
 
         }
     }
