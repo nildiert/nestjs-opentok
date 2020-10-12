@@ -7,8 +7,8 @@ import {
   Body,
   Param,
   HttpStatus,
-} from '@nestjs/common';
-import { AxiosResponse } from 'axios';
+} from '@nestjs/common'
+
 import { ChannelsService } from './channels.service';
 import { ChannelsDTO } from './channels.dto';
 
